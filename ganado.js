@@ -2,7 +2,21 @@
 function sumatoria (animal1, animal2, animal3, animal4){
     return  animal1 + animal2 + animal3 + animal4;
 }
-
+function SWoperador (parametro1) {
+    switch (parametro1) {
+        case "*":
+            alert("El resultado de multiplicar tus rodeos es " + (rodeoCerdos * rodeoVacas))
+            break;
+        case "/":
+            alert("El resultado de dividir tus rodeos es " + (rodeoCerdos / rodeoVacas))
+            break;
+        case "-":
+            alert("El resultado de restar tus rodeos es " + (rodeoCerdos - rodeoVacas))
+            break; 
+        default:
+            break;
+    }  
+}
 
 //PORCINO
 let lechones, cachorras, cerdos, padrillos
@@ -51,7 +65,7 @@ alert( "El total de tu rodeo bovino es de " + rodeoVacas + " animales");
 let totalRodeo = (rodeoCerdos + rodeoVacas)
 let datoPorcentaje, porcentajeCerdos, porcentajeVacas 
 do{
-    alert("Tienes " + totalRodeo + " animales")
+    alert( "Tienes " + totalRodeo + " animales")
     datoPorcentaje = prompt ("¿Quieres que te diga que porcentaje representa cada tipo de ganado? (si/no)")
 
     if (datoPorcentaje == "si") {
@@ -64,6 +78,18 @@ do{
         break
     }
 } while( datoPorcentaje != "si")
+
+//SIGUIENTE PREGUNTA
+let respuesta = prompt("¿Quieres hacer otro cálculo?")
+if (respuesta == "si") {
+    
+    let operador ;
+    do{ 
+        operador = prompt("Elije: `*`, `/` , `-`")
+        SWoperador(operador)
+        
+    } while ((operador != "*" && operador != "/" && operador != "-"))
+} 
 
 
 
